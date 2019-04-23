@@ -14,7 +14,7 @@ namespace Openlol\Model
 		private $id;
 
 		/**
-		 * Unique string to define the Role.
+		 * Unique string to identify the Role.
 		 * 
 		 * @var string
 		 */
