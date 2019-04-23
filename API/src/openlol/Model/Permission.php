@@ -4,36 +4,36 @@ namespace Openlol\Model
 {
 	class Permission
 	{
-        // Properties
-        /** 
-         * Primary Key of the Permission in the database.
-         * 
-         * @var int */
-        private $id;
+		// Properties
+		/** 
+		 * Primary Key of the Permission in the database.
+		 * 
+		 * @var int */
+		private $id;
 
-        /** 
-         * Unique string to identify the Permission.
+		/** 
+		 * Unique string to identify the Permission.
 		 * 
 		 * Example: "PERM_CREATE_POST"
-         * 
-         * @var string */
-        private $systemName;
-        
-        /** 
+		 * 
+		 * @var string */
+		private $systemName;
+		
+		/** 
 		 * Human-readable display name of the permission.
 		 * 
 		 * Example: "Create Posts"
 		 * 
 		 * @var string */
-        private $displayName;
+		private $displayName;
 
-        /** 
+		/** 
 		 * Human-readable description of the permission.
 		 * 
 		 * Example: "This permission allows a user to create a new post."
 		 * 
 		 * @var string */
-        private $displayDescription;
+		private $displayDescription;
 
 		// Getters and Setters
 	
@@ -101,9 +101,9 @@ namespace Openlol\Model
 			$this->displayName = $displayName;
 
 			return $this;
-        }
-        
-        /**
+		}
+		
+		/**
 		 * Get the value of displayName
 		 * 
 		 * @return string
