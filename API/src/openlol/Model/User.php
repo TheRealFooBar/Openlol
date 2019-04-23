@@ -5,18 +5,61 @@ namespace Openlol\Model
 	class User
 	{
 		// Properties
+
+		/**
+		 * Primary Key of the User in the database.
+		 * 
+		 * @var	int
+		 * */
 		private $id;
+
+		/** 
+		 * Reference to the Role of the User.
+		 * 
+		 * @var Role
+		 * */
 		private $role;
+
+		/** 
+		 * Visible Display Name of the User
+		 * 
+		 * @var string */
 		private $displayName;
+
+		/** 
+		 * Link to the avatar of the User.
+		 * If this is null, then a default avatar shall be used.
+		 *  
+		 * @var ?string */
 		private $avatar;
+
+		/** 
+		 * E-Mail adress of the User.
+		 * 
+		 * @var string */
 		private $email;
+
+		/** 
+		 * The encoded hash and salt of the User's password.
+		 * As a Key Derivation Function, Argon2id was chosen.
+		 * The User's password is *NEVER* stored in plain text.
+		 * 
+		 * @var string */
 		private $password;
+
+		/** 
+		 * The version of the password alogorithm chosen.
+		 * If this is less than the current algorithm, hash migration needs to occur.
+		 * 
+		 * @var string */
 		private $passwordAlgorithm;
 
 		// Getters and Setters
 
 		/**
 		 * Get the value of id
+		 * 
+		 * @return int
 		 */ 
 		public function getId(): int
 		{
@@ -26,7 +69,7 @@ namespace Openlol\Model
 		/**
 		 * Set the value of id
 		 *
-		 * @return  self
+		 * @return self
 		 */ 
 		public function setId($id): self
 		{
@@ -37,6 +80,8 @@ namespace Openlol\Model
 
 		/**
 		 * Get the value of role
+		 * 
+		 * @return Role
 		 */ 
 		public function getRole() : Role
 		{
@@ -48,7 +93,7 @@ namespace Openlol\Model
 		 *
 		 * @return  self
 		 */ 
-		public function setRole(Role $role)
+		public function setRole(Role $role): self
 		{
 			$this->role = $role;
 
@@ -57,6 +102,8 @@ namespace Openlol\Model
 
 		/**
 		 * Get the value of displayName
+		 * 
+		 * @return string
 		 */ 
 		public function getDisplayName(): string
 		{
@@ -77,8 +124,10 @@ namespace Openlol\Model
 
 		/**
 		 * Get the value of avatar
+		 * 
+		 * @return ?string
 		 */ 
-		public function getAvatar(): string
+		public function getAvatar(): ?string
 		{
 			return $this->avatar;
 		}
@@ -97,6 +146,8 @@ namespace Openlol\Model
 
 		/**
 		 * Get the value of email
+		 * 
+		 * @return string
 		 */ 
 		public function getEmail(): string
 		{
@@ -117,6 +168,8 @@ namespace Openlol\Model
 
 		/**
 		 * Get the value of password
+		 * 
+		 * @return string
 		 */ 
 		public function getPassword(): string
 		{
@@ -137,6 +190,8 @@ namespace Openlol\Model
 
 		/**
 		 * Get the value of passwordAlgorithm
+		 * 
+		 * @return int
 		 */ 
 		public function getPasswordAlgorithm(): int
 		{
