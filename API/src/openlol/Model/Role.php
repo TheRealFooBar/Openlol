@@ -66,7 +66,7 @@ namespace Openlol\Model
 		 *
 		 * @return  self
 		 */ 
-		public function setSystemName($systemName): self
+		public function setSystemName(string $systemName): self
 		{
 			$this->systemName = $systemName;
 
@@ -88,7 +88,7 @@ namespace Openlol\Model
 		 *
 		 * @return  self
 		 */ 
-		public function setDisplayName($displayName): self
+		public function setDisplayName(string $displayName): self
 		{
 			$this->displayName = $displayName;
 
