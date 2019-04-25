@@ -13,4 +13,10 @@ return function (App $app) {
 		$logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
 		return $logger;
 	};
+
+	// Database
+	$container['dbController'] = function ($container) {
+		$db = new Openlol\Backend\DatabaseController();
+		return $db;
+	};
 };
